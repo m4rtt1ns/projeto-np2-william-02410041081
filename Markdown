@@ -1,0 +1,17 @@
+## Relato de Aprendizagem (3 pontos)
+
+### Raciocínio Seguido
+Para a resolução das atividades, foquei na lógica fundamental de estruturas de dados:
+- **Árvores (`Maps_tree`):** Implementei uma abordagem iterativa que consome a lista de respostas passo a passo. O foco foi garantir que a navegação parasse na folha correta ou levantasse erros descritivos caso as respostas fossem insuficientes ou inválidas.
+- **Grafos (`connected`):** Utilize o algoritmo de Busca em Largura (BFS). Para cumprir a restrição de "apenas listas", simulei o comportamento de uma fila utilizando `list.pop(0)` e controle de visitados para evitar loops.
+
+### Dúvidas e Decisões Tomadas
+1. **Tratamento de Strings:** Havia dúvida sobre como lidar com entradas como "NAO" ou "sim ". Decidi aplicar `.strip().lower()` e converter explicitamente "nao" (sem til) para "não", garantindo que o código seja robusto contra erros de digitação.
+2. **Performance vs. Requisitos:** Na função `connected`, optei por usar listas nativas em vez de `deque` (que seria mais performático). Essa foi uma decisão consciente para atender estritamente ao requisito do exercício que proibia importações externas ou estruturas complexas.
+3. **Validação de Erros:** Decidi levantar `ValueError` imediatamente ao encontrar inconsistências (como falta de respostas na árvore), para facilitar o debugging.
+
+### Uso de IA
+Utilizei ferramentas de IA (Gemini) como apoio no desenvolvimento:
+- **Refatoração:** A IA auxiliou na verificação da sintaxe correta para normalização de strings em Python.
+- **Conformidade:** Usei a IA para revisar se o código estava aderente às docstrings (ex: confirmar que não havia imports proibidos no arquivo de grafos).
+- **Aprendizado:** O processo reforçou meu entendimento sobre como manipular estruturas de dados usando apenas recursos primitivos da linguagem (listas), sem depender de bibliotecas prontas.
